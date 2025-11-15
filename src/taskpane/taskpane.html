@@ -8,27 +8,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Easy translator tool for EXCEL</title>
+    <title>Easy Translator Tool for Excel</title>
 
     <!-- Office JavaScript API -->
     <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
 
-    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
-    <link rel="stylesheet" href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/office-ui-fabric-core/11.1.0/css/fabric.min.css"/>
+    <!-- Fluent UI Core Styles -->
+    <link rel="stylesheet" href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/office-ui-fabric-core/11.1.0/css/fabric.min.css" />
 
     <!-- Template styles -->
     <link href="taskpane.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="ms-font-m ms-welcome ms-Fabric">
-    <section id="sideload-msg" class="ms-welcome__main">
-        <h2 class="ms-font-xl">Please <a target="_blank" href="https://learn.microsoft.com/office/dev/add-ins/testing/test-debug-office-add-ins#sideload-an-office-add-in-for-testing">sideload</a> your add-in to see app body.</h2>
+<body class="ms-Fabric ms-font-m">
+    <section id="sideload-msg" class="ms-welcome__main ms-Grid">
+        <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-sm12">
+                <h2 class="ms-font-xl ms-fontWeight-semibold">Please <a target="_blank" href="https://learn.microsoft.com/office/dev/add-ins/testing/test-debug-office-add-ins#sideload-an-office-add-in-for-testing">sideload</a> your add-in to see the app body.</h2>
+            </div>
+        </div>
     </section>
-    <main id="app-body" class="ms-welcome__main" style="display: none;">
-        <h2>Excel Translator</h2>
-        <input type="text" id="inputText" placeholder="Enter English text" />
-        <button id="translateBtn">Translate</button>
-        <div id="result"></div>
+    <main id="app-body" class="ms-welcome__main ms-Grid" style="display: none;">
+        <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-sm12">
+                <h2 class="ms-font-xxl ms-fontWeight-semibold">Excel Translator</h2>
+            </div>
+        </div>
+        <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-sm12">
+                <div class="ms-TextField">
+                    <input class="ms-TextField-field" type="text" id="inputText" placeholder="Enter English text" />
+                </div>
+            </div>
+        </div>
+        <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-sm12">
+                <button class="ms-Button" id="translateBtn">
+                    <span class="ms-Button-label">Translate</span>
+                </button>
+            </div>
+        </div>
+        <div class="ms-Grid-row">
+            <div class="ms-Grid-col ms-sm12">
+                <div id="result" class="ms-font-m ms-fontColor-neutralPrimary"></div>
+            </div>
+        </div>
     </main>
 </body>
 
